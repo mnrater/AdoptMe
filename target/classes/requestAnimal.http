@@ -1,0 +1,16 @@
+POST http://localhost:8080/animals
+Content-Type: application/json
+
+{
+  "name": "Tosia",
+  "age":  10,
+  "shelter": 30,
+  "image": "asdjkasndjkas",
+  "order": {
+    "id": 1
+  }
+}
+###
+GET http://localhost:8080/animals/1
+Accept: application/json
+###
