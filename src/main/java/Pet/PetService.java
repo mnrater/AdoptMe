@@ -5,20 +5,20 @@ import java.util.Optional;
 
 public class PetService {
 
-//    private final PetRepository repository;
-//
-//    public PetService(PetRepository repository) {
-//        this.repository = repository;
-//    }
-//
-//    public List<Pet> getAllPets() {
-//        return repository.findAll();
-//    }
-//
-//    public Optional<Pet> getPetById(final long id) {
-//        return repository.findById(id);
-//    }
-//
+    private final PetRepository repository;
+
+    public PetService(PetRepository repository) {
+        this.repository = repository;
+    }
+
+    public List<Pet> getAllPets() {
+        return repository.findAll();
+    }
+
+    public Pet getPetById(Pet pet) {
+        return repository.findOne(pet);
+    }
+
 //    public Pet createPet(final Pet pet) {
 //        return repository.save(pet);
 //    }
