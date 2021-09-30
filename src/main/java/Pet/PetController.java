@@ -9,16 +9,16 @@ import java.util.Optional;
 @RestController
 public class PetController {
 
-//    private final PetService service;
-//
-//    public PetController(PetService service) {
-//        this.service = service;
-//    }
-//
-//    @GetMapping("/pets")
-//    public List<Pet> getPets() {
-//        return service.getAllPets();
-//    }
+    private final PetService service;
+
+    public PetController(PetService service) {
+        this.service = service;
+    }
+
+    @GetMapping("/pets")
+    public List<Pet> getPets() {
+        return service.getAllPets();
+    }
 //
 //    @PostMapping("/pets")
 //    @ResponseStatus(HttpStatus.CREATED)

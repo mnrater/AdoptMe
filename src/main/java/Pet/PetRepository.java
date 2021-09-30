@@ -12,9 +12,9 @@ import java.util.List;
 @Repository
 public class PetRepository {
 
-    private static final String FIND_ALL = "SELECT id, name, age, shelter_id, photo, type FROM Pet";
-    private static final String FIND_ONE_BY_ID = "SELECT id, name, age, shelter_id, photo, type FROM Pet WHERE id = :id";
-    private static final String CREATE = "INSERT INTO Pet(name, age, photo, type, shelter_id) VALUES (:name, :age, :photo, :type, :shelter_id)";
+    private static final String FIND_ALL = "SELECT id, name, age, photo, pettypes_id FROM Pet";
+    private static final String FIND_ONE_BY_ID = "SELECT id, name, age, photo, pettypes_id FROM Pet WHERE id = :id";
+    private static final String CREATE = "INSERT INTO Pet(name, age, photo, pettypes_id) VALUES (:name, :age, :photo, :pettypes_id)";
     private static final String UPDATE = "";
 
     private final NamedParameterJdbcTemplate namedTemplate;
@@ -27,6 +27,7 @@ public class PetRepository {
     }
 
     public List<Pet> findAll() {
+        System.out.println("xd");
         return namedTemplate.query(FIND_ALL, new PetRowMapper());
     }
 
@@ -41,9 +42,8 @@ public class PetRepository {
         MapSqlParameterSource source = new MapSqlParameterSource();
         source.addValue("name", pet.getName());
         source.addValue("age", pet.getAge());
-        source.addValue("shelter_id", pet.getShelterID());
         source.addValue("photo", pet.getPhoto());
-        source.addValue("type", pet.getType());
+        source.addValue("pettypes_id", pet.getType());
         final List<Integer> query = namedTemplate.query(CREATE, source, new IdRowMapper());
         pet.setId(query.stream().findFirst().orElseThrow(RuntimeException::new));
         return pet;
