@@ -1,47 +1,8 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-} */
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* *{padding: 0; margin: 0; box-sizing: border-box;} */
+*{padding: 0; margin: 0; box-sizing: border-box;}
 
 body{height: 900px;}
 
-/* header {
+.header_big{
 	text-align: center;
 	width: 100%;
 	height: auto;
@@ -50,9 +11,10 @@ body{height: 900px;}
 	position: relative;
 	overflow: hidden;
 	border-radius: 0 0 85% 85% / 30%;
-} */
+  transition: 1s;
+}
 
-header .overlay{
+.overlay{
 	width: 100%;
 	height: 100%;
 	padding: 50px;
@@ -62,18 +24,18 @@ header .overlay{
 	
 }
 
-header h1 {
-	font-family: 'Dancing Script', cursive;
+.overlay h1 {
+	font-family: 'Trebuchet MS', sans-serif;
 	font-size: 80px;
 	margin-bottom: 30px;
 }
 
-header h3, p {
-	font-family: 'Open Sans', sans-serif;
+.overlay h3, p {
+	font-family: 'Trebuchet MS', sans-serif;
 	margin-bottom: 30px;
 }
 
-header button {
+.readmore_button {
 	border: none;
 	outline: none;
 	padding: 10px 20px;
@@ -83,9 +45,139 @@ header button {
 	margin-bottom: 50px;
 	box-shadow: 0 3px 20px 0 #0000003b;
 }
-header button:hover{
+.overlay button:hover{
 	cursor: pointer;
 }
-header img {
+.logo {
+margin-right: 20px;
+margin-left: 40px;
+}
 
+.header_small {
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+  transition: 1s;
+}
+
+.header_small .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.logo_text {
+margin-right: 40px;
+}
+
+a {
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.header_link_right {
+  margin-right: 40px;
+  line-height:20px;
+}
+.header_link_left {
+  margin-right: 40px;
+  line-height:20px;
+}
+
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
 }
