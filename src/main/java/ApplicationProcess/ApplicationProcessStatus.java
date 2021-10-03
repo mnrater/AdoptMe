@@ -1,4 +1,4 @@
-package ApplicationProcess;
+package applicationProcess;
 
 public enum ApplicationProcessStatus {
     NEW,

@@ -1,8 +1,10 @@
-package Pet;
+package pet;
+
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
+@Service
 public class PetService {
 
     private final PetRepository repository;
@@ -14,11 +16,11 @@ public class PetService {
     public List<Pet> getAllPets() {
         return repository.findAll();
     }
-
-    public Pet getPetById(Pet pet) {
-        return repository.findOne(pet);
-    }
-
+//
+//    public Optional<Pet> getPetById(final long id) {
+//        return repository.findById(id);
+//    }
+//
 //    public Pet createPet(final Pet pet) {
 //        return repository.save(pet);
 //    }

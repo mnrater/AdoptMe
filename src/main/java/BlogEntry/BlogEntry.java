@@ -1,4 +1,4 @@
-package BlogEntry;
+package blogEntry;
 
 import javax.persistence.*;
 import java.util.Objects;

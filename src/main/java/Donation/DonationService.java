@@ -1,4 +1,4 @@
-package Donation;
+package donation;
 
 public class DonationService {
 }

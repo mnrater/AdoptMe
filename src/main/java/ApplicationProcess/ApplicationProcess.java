@@ -1,4 +1,4 @@
-package ApplicationProcess;
+package applicationProcess;
 
 import javax.persistence.*;
 import java.util.Objects;

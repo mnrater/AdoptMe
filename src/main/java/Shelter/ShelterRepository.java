@@ -1,4 +1,4 @@
-package Shelter;
+package shelter;
 
 public interface ShelterRepository {
 }

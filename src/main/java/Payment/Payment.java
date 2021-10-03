@@ -1,4 +1,4 @@
-package Payment;
+package payment;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

@@ -1,4 +1,4 @@
-package Pet;
+package pet;
 
 
 import org.springframework.jdbc.core.RowMapper;

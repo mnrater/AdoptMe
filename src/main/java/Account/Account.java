@@ -1,4 +1,4 @@
-package Account;
+package account;
 
 import javax.persistence.*;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package Pet;
+package pet;
 
 
 import org.springframework.jdbc.core.RowMapper;
@@ -15,9 +15,8 @@ public class PetRowMapper implements RowMapper<Pet> {
         pet.setId(rs.getInt("id"));
         pet.setName(rs.getString("name"));
         pet.setAge(rs.getInt("age"));
-        pet.setShelterID(rs.getInt("shelter_id"));
         pet.setPhoto(rs.getString("photo"));
-        pet.setType(rs.getString("type"));
+        pet.setType(rs.getString("pettypes_id"));
         return pet;
     }
 }

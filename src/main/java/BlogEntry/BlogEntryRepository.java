@@ -1,4 +1,4 @@
-package BlogEntry;
+package blogEntry;
 
 public interface BlogEntryRepository {
 }

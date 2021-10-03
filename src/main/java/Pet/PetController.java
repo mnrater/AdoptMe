@@ -1,12 +1,11 @@
-package Pet;
+package pet;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
+@CrossOrigin("http://localhost:3000")
 public class PetController {
 
     private final PetService service;

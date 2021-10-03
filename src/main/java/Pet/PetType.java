@@ -1,4 +1,4 @@
-package Pet;
+package pet;
 
 public enum PetType {
     DOG(1),

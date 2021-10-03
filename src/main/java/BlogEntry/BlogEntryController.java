@@ -1,4 +1,4 @@
-package BlogEntry;
+package blogEntry;
 
 public class BlogEntryController {
 }

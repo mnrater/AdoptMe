@@ -1,4 +1,4 @@
-package Pet;
+package pet;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -15,9 +15,6 @@ public class Pet {
 
     @Column(length = 40)
     private int age;
-
-    @Column(length = 100)
-    private int shelterID;
 
     @Column(length = 100)
     private String photo;
@@ -48,14 +45,6 @@ public class Pet {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public int getShelterID() {
-        return shelterID;
-    }
-
-    public void setShelterID(int shelterID) {
-        this.shelterID = shelterID;
     }
 
     public String getPhoto() {

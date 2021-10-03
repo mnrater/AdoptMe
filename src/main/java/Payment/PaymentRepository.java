@@ -1,4 +1,4 @@
-package Payment;
+package payment;
 
 public interface PaymentRepository {
 }

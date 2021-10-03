@@ -1,4 +1,4 @@
-package AdoptionMeeting;
+package adoptionMeeting;
 
 import javax.persistence.*;
 import java.util.Objects;

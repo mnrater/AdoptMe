@@ -1,4 +1,4 @@
-package AdoptionMeeting;
+package adoptionMeeting;
 
 public class AdoptionMeetingService {
 }

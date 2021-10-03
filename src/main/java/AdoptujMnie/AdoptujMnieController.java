@@ -1,4 +1,4 @@
-package AdoptujMnie;
+package adoptujMnie;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
