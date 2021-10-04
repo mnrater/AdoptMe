@@ -25,13 +25,24 @@ export const Header = () => {
         <>
             <header id="header" class="header_big">
                 <div class="overlay" id="header_scroll">
-                    <a class="header_link_left">Adoptuj!</a>
-                    <a class="header_link_left">Wspomóż!</a>
-                    <img class="logo" id="img" src={Logo} width='160' height='160' />
-                    <img class="logo_text" id="img" src={Logo_text} width='600' height='130' />
-                    <a class="header_link_right">Blog</a>
-                    <a class="header_link_right">Zaloguj się!</a>
-                    <h2>Nie możesz kupić miłości, ale możesz ją adoptować!</h2>
+                    <div class="header_content">
+                        <div class="header_content_left">
+                            <a class="header_link_left">Adoptuj</a>
+                            <a class="header_link_left">Wspomóż</a>
+                        </div>
+                        <div class="header_content_center">
+                            <img class="logo" id="img" src={Logo} />
+                            <img class="logo_text" id="img" src={Logo_text} />
+                        </div>
+                        <div class="header_content_right">
+                            <a class="header_link_right">Blog</a>
+                            <a class="header_link_right">Zaloguj się</a>
+                        </div>
+                        <div class="header_content_bottom">
+                            <h2>Nie możesz kupić miłości, ale możesz ją adoptować!</h2>
+                        </div>
+                    </div>
+                    {/*
                     <br></br>
                     <br></br>
                     <div class="search-bar">
@@ -41,7 +52,7 @@ export const Header = () => {
                                 <button class="header_link" type="submit">Szukaj</button>
                             </div>
                         </form>
-                    </div>
+                    </div> */}
                     {/* <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam consequatur ab. Vero nostrum quis, odio veniam itaque ullam debitis qui magnam consequatur ab.</p> */}
                     {/* <br></br>
                     <button class="readmore_button">READ MORE</button> */}
