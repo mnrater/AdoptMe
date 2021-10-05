@@ -7,7 +7,6 @@ export const Footer = () => {
     <div className="footer_container"> 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"></link>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"></link>
-                <link rel="stylesheet" href="assets/css/style.css"></link>
                 <div class="footer-dark">
                     <footer>
                         <div class="container">
@@ -27,10 +26,6 @@ export const Footer = () => {
                                         <li><a href="#">Team</a></li>
                                         <li><a href="#">Careers</a></li>
                                     </ul>
-                                </div>
-                                <div class="col-md-6 item text">
-                                    <h3>Company Name</h3>
-                                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
                                 </div>
                                 <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
                             </div>

@@ -42,7 +42,7 @@
     outline: none;
     padding: 10px 20px;
     border-radius: 50px;
-    color: #333;
+    color: #333 !important;
     background: #fff;
     box-shadow: 0 3px 20px 0 #0000003b;
   }
@@ -73,7 +73,7 @@
     width: 150px;
     height: 54px;
     border-radius: 50px;
-    color: #333;
+    color: #333 !important;
     background: #fff;
     box-shadow: 0 3px 20px 0 #0000003b;
     font-family: 'Trebuchet MS', sans-serif;
@@ -90,7 +90,7 @@
     width: 150px;
     height: 54px;
     border-radius: 50px;
-    color: #333;
+    color: #333 !important;
     background: #fff;
     box-shadow: 0 3px 20px 0 #0000003b;
     font-family: 'Trebuchet MS', sans-serif;
@@ -241,10 +241,6 @@
     width: 100%;
   }
 
-  .logo_small {
-
-  }
-
   @media (min-device-width: 620px)
   /* Wersja przeglądarkowa */
 
@@ -290,7 +286,7 @@
         width: 100px;
         height: 36px;
         border-radius: 34px;
-        color: #333;
+        color: #333 !important;
         background: #fff;
         box-shadow: 0 3px 20px 0 #0000003b;
         font-family: 'Trebuchet MS', sans-serif;
@@ -307,7 +303,7 @@
         width: 100px;
         height: 36px;
         border-radius: 34px;
-        color: #333;
+        color: #333 !important;
         background: #fff;
         box-shadow: 0 3px 20px 0 #0000003b;
         font-family: 'Trebuchet MS', sans-serif;
@@ -360,7 +356,7 @@
         width: 100px;
         height: 36px;
         border-radius: 34px;
-        color: #333;
+        color: #333 !important;
         background: #fff;
         box-shadow: 0 3px 20px 0 #0000003b;
         font-family: 'Trebuchet MS', sans-serif;
@@ -377,7 +373,7 @@
         width: 100px;
         height: 36px;
         border-radius: 34px;
-        color: #333;
+        color: #333 !important;
         background: #fff;
         box-shadow: 0 3px 20px 0 #0000003b;
         font-family: 'Trebuchet MS', sans-serif;
@@ -422,7 +418,52 @@
   .logo_mobile {
     width: 50px;
     height: 50px;
+    /* margin-right: 46.58px; */
     /* transition: 2s; */
+    margin: 0 auto;
+  }
+
+  .navigation_menu_mobile {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .navigation_menu_mobile a {
+      padding: 14px 16px;
+      text-decoration: none;
+      display: block;
+  }
+
+  .header_content_mobile a.icon {
+    color: white;
+    margin-left: 20px;
+    float: left;
+    padding: 13px 16px;
+    text-decoration: none;
+    display: block;
+    margin-right: 52.03px;
+  }
+
+  .navigation_menu_mobile a:hover {
+    color: #DCD9D4;
+  }
+
+  .hidden_links_mobile {
+    display: none;
+  }
+
+  .header_link_mobile_login  {
+    margin-right: 20px;
+    text-align: center;
+    padding: 13px;
+    border-radius: 30px;
+    color: #333;
+    background: #fff;
+    box-shadow: 0 3px 20px 0 #0000003b;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    color: #333 !important;
+    float: right;
   }
 
   @media (max-device-width: 620px)

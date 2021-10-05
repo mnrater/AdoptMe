@@ -33,17 +33,23 @@ export const Header = () => {
 
     return (
         <>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             {isMobile ? (
                 <header id="header_mobile" class="header_mobile">
                     <div class="overlay_mobile" id="header_scroll_mobile">
                         <div class="header_content_mobile">
-                            <div class="header_content_top_mobile">
-                                {/* <a class="header_link_mobile">Adoptuj</a>
-                                <a class="header_link_mobile">Wspomóż</a> */}
-                                <img class="logo_mobile" id="img" src={LogoMobile} />
-                                {/* <a class="header_link_mobile">Blog</a>
-                                <a class="header_link_mobile">Zaloguj się</a> */}
-                            </div>
+                            {/* <div class="navigation_menu_mobile"> */}
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            {/* <div class="hidden_links_mobile">
+                                    <a class="hidden_header_link_mobile">Adoptuj</a>
+                                    <a class="hidden_header_link_mobile">Wspomóż</a>
+                                    <a class="hidden_header_link_mobile">Blog</a> */}
+                            {/* </div> */}
+                            <a class="header_link_mobile_login">Zaloguj się</a>
+                            {/* </div> */}
+                            <img class="logo_mobile" id="img" src={LogoMobile} />
                         </div>
                     </div>
                 </header>
