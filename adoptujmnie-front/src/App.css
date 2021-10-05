@@ -245,7 +245,7 @@
   /* Wersja przeglądarkowa */
 
     {
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1440px) {
       /* Circa 1,5x smaller, when width is smaller then 1200px */
 
       .header_content_bottom h2 {
