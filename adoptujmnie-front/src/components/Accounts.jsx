@@ -15,6 +15,7 @@ export const Accounts = () => {
     return (
         <>
             <div>
+                beka
                 Email: <b>{appState.accounts.email}</b>
                 <br></br>
                 Hasło: <b>{appState.accounts.password}</b>

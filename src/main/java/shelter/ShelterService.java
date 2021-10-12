@@ -1,4 +1,25 @@
 package shelter;
 
+import account.Account;
+import account.AccountRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
 public class ShelterService {
+
+    private final ShelterRepository repository;
+
+    public ShelterService(ShelterRepository repository) {
+        this.repository = repository;
+    }
+
+    public List<Shelter> getAllshelters() {
+        return repository.findAll();
+    }
+
+    public Shelter getShelterById(Integer id) {
+        return repository.findShelterById(id);
+    }
 }
