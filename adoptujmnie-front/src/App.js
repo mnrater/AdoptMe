@@ -1,5 +1,7 @@
 import './App.css';
+import React from "react";
 import {Pets} from './components/Pets'
+import {SearchBar} from './components/SearchBar'
 import {Header} from './components/Header'
 import {Footer} from './components/Footer'
 import {Accounts} from './components/Accounts'
@@ -19,6 +21,8 @@ function App() {
       <Header></Header>
       <Router>
         <Switch>
+          <Route path="/"><SearchBar /></Route>
+          <Route path="/"><Pets /></Route>
           <Route path="/pets"><Pets /></Route>
           <Route exact path="/account/:id"><Accounts /></Route>
           <Route path="/account/:id/my_pets"><PetsForAccount/></Route>
