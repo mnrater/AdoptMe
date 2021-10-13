@@ -13,19 +13,22 @@ export const Pets = () => {
 
     return (
         <>
-            {appState.pets.map(pet => {
-                return (
-                    <div>
-                        Imię: <b>{pet.name}</b>
-                        <br></br>
-                        Wiek: <b>{pet.age}</b>
-                        <br></br>
-                        Typ: <b>{pet.type}</b>
-                        <br></br>
-                        Fotografia: <b>{pet.photo}</b>
-                    </div>
-                )
-            })}
+            <div class="pet_container">
+                {appState.pets.map(pet => {
+                    return (
+                        <div class="pet">
+                            Imię: <b>{pet.name}</b>
+                            <br></br>
+                            Wiek: <b>{pet.age}</b>
+                            <br></br>
+                            Typ: <b>{pet.type}</b>
+                            <br></br>
+                            Fotografia: <b>{pet.photo}</b>
+                            <br></br>
+                        </div>
+                    )
+                })}
+            </div>
         </>
     )
 }
