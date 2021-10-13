@@ -17,14 +17,14 @@ export const Pets = () => {
                 {appState.pets.map(pet => {
                     return (
                         <div class="pet">
-                            Imię: <b>{pet.name}</b>
-                            <br></br>
-                            Wiek: <b>{pet.age}</b>
-                            <br></br>
-                            Typ: <b>{pet.type}</b>
-                            <br></br>
-                            Fotografia: <b>{pet.photo}</b>
-                            <br></br>
+                            <img class="petPhoto" src={pet.photo}></img>
+                            <hr></hr>
+                            <div class="petName">
+                                <b>{pet.name}</b>
+                            </div>
+                            <div class="petAge">
+                                <b>{pet.age} lat</b>
+                            </div>
                         </div>
                     )
                 })}

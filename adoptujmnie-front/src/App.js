@@ -21,9 +21,7 @@ function App() {
       <Header></Header>
       <Router>
         <Switch>
-          <Route path="/"><Pets /></Route>
-          <Route path="/"><SearchBar /></Route>
-          <Route path="/"><Pets /></Route>
+          <Route path="/"><SearchBar /><Pets /></Route>
           <Route path="/pets"><Pets /></Route>
           <Route exact path="/account/:id"><Accounts /></Route>
           <Route path="/account/:id/my_pets"><PetsForAccount/></Route>
