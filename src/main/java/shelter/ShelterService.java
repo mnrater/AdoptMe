@@ -3,6 +3,7 @@ package shelter;
 import account.Account;
 import account.AccountRepository;
 import org.springframework.stereotype.Service;
+import pet.Pet;
 
 import java.util.List;
 
@@ -21,5 +22,9 @@ public class ShelterService {
 
     public Shelter getShelterById(Integer id) {
         return repository.findShelterById(id);
+    }
+
+    public List<Pet> getAllPetsForShelter(int id){
+        return repository.findAllPetsForShelter(id);
     }
 }

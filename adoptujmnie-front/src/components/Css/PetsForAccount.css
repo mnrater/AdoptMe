@@ -1,17 +1,22 @@
 .box {
 border: 1px solid black;
 padding: 5px;
-width: 800px;
+width: 600px;
 margin-bottom: 10px;
 float: left;
 }
 
 .image {
     float: left;
-    display: block;
+    height: 75px;
+    width: 235px;
+    font-family: Veranda;
+    vertical-align: baseline;
+    height: auto;
+
 }
 
 .text {
     float: left;
-    display: block;
+
 }

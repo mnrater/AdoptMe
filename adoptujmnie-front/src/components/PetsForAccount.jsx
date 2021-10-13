@@ -21,7 +21,6 @@ export const PetsForAccount = () => {
                         <div class="image">
                         Fotografia: <b>{pet.photo}</b>
                         </div>
-                        <br></br>
                         <div class="text">
                             Imię: <b>{pet.name}</b>
                             <br></br>
