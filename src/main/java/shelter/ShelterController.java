@@ -17,18 +17,18 @@ public class ShelterController {
         this.service = service;
     }
 
-    @GetMapping("/shelter")
+    @GetMapping("/shelters")
     public List<Shelter> getAll(){
         return service.getAllshelters();
     }
 
-    @RequestMapping("/shelter/{id}")
+    @RequestMapping("/shelters/{id}")
     @ResponseBody
     public Shelter getAccount(@PathVariable(value = "id") Integer id) {
         return service.getShelterById(id);
     }
 
-    @RequestMapping("/shelter/{id}/my_pets")
+    @RequestMapping("/shelters/{id}/my_pets")
     @ResponseBody
     public List<Pet> getAllPetsForShelter(@PathVariable(value = "id") Integer id){
         return service.getAllPetsForShelter(id);

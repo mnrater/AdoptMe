@@ -24,7 +24,7 @@ public class AccountController {
     @RequestMapping("/account/{id}")
     @ResponseBody
     public Account getAccount(@PathVariable(value = "id") Integer id) {
-        return service.getAllFromAccount(id);
+        return service.getAccount(id);
     }
 
     @RequestMapping("/account/{id}/my_pets")

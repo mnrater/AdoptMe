@@ -1,5 +1,7 @@
 package account;
 
+import org.modelmapper.ModelMapper;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -60,6 +62,11 @@ public class Account {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public AccountDTO convertToDto(Account account){
+        ModelMapper modelMapper = new ModelMapper();
+        return modelMapper.map(account, AccountDTO.class);
     }
 
     @Override

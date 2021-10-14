@@ -17,7 +17,7 @@ public class ShelterRepository {
     private static final String FIND_ALL = "SELECT id, name, creationdate FROM shelter";
     private static final String FIND_ONE_BY_ID = "SELECT id, name, creationdate FROM shelter WHERE id=?";
     private static final String CREATE = "INSERT INTO account(name, creationdate) VALUES (:name, :creationdate)";
-    private static final String PETS_FOR_SHELTER = "SELECT id, name, age, photo, pettypes_id FROM pet_shelter INNER JOIN pet ON pet_id=id WHERE shelter_id=?";
+    private static final String PETS_FOR_SHELTER = "SELECT id, name, age, photo, pettypes_id FROM pet_shelter INNER JOIN pet ON pet_id=id WHERE shelter_id = ?";
     private static final String UPDATE = "";
 
     private final NamedParameterJdbcTemplate namedTemplate;

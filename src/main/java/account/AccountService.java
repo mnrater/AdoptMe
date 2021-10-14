@@ -1,5 +1,6 @@
 package account;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import pet.Pet;
 import pet.PetRepository;
@@ -15,7 +16,7 @@ public class AccountService {
         this.repository = repository;
     }
 
-    public Account getAllFromAccount(int id) {
+    public Account getAccount(int id) {
         return repository.findAccountById(id);
     }
 
