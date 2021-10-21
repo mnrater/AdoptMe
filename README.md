@@ -22,4 +22,4 @@ Technologies:
 - Database: PostgreSQL
 
 Database structure: <br>
-<img src="/readme_images/database_structure.jpg" width="800 height="500"/>
+<img src="/readme_images/database_structure.jpg" width="900" height="700" />
