@@ -24,5 +24,5 @@ Technologies:
 Database structure: <br>
 <img src="/readme_images/database_structure.jpg" width="900" height="700" />
 
-Preview:
-<img src="/readme_images/website_preview.png" width="900" height="700" />
+Preview: <br>
+<img src="/readme_images/website_preview.png" width="900" height="600" />
