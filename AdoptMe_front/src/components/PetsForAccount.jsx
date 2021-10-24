@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './Css/PetsForAccount.css';
+import './css/PetsForAccount.css';
 import { useParams } from "react-router-dom";
 
 export const PetsForAccount = () => {

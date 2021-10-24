@@ -3,7 +3,7 @@ import Logo from '../photos/logo.png'
 import LogoMobile from '../photos/piesioWRamce.png'
 import LogoLoginMobile from '../photos/login_logo.png'
 
-export const Header = () => {
+export const Header = ({showLoginRegistrationModal}) => {
 
     const [width, setWidth] = useState(window.innerWidth);
 
@@ -58,7 +58,7 @@ export const Header = () => {
                                 <a class="header_link_left">Wspomóż</a>
                                 <img class="logo" id="Logo" src={Logo} />
                                 <a class="header_link_right">Blog</a>
-                                <a class="header_link_right">Zaloguj się</a>
+                                <a class="header_link_right" id="log_in" onClick={() => showLoginRegistrationModal()}>Zaloguj się</a>
                             </div>
                             <div class="header_content_bottom">
                                 <h2>Nie możesz kupić miłości, ale możesz ją adoptować!</h2>

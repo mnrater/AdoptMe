@@ -1,11 +1,12 @@
 import './App.css';
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {Pets} from './components/Pets'
 import {SearchBar} from './components/SearchBar'
 import {Header} from './components/Header'
 import {Footer} from './components/Footer'
 import {Accounts} from './components/Accounts'
 import {PetsForAccount} from './components/PetsForAccount'
+import { RegistrationLogin } from './components/RegistrationLogin';
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,19 +17,21 @@ import { Component } from 'react';
 
 
 function App() {
+
+  const [loginRegistrationModalVisibility, setLoginRegistrationModal] = useState(false)
+
   return (
     <div className="App">
-      <Header></Header>
+      <Header showLoginRegistrationModal={() => setLoginRegistrationModal(true)} />
       <Router>
         <Switch>
-          <Route path="/"><SearchBar /><Pets /></Route>
+          <Route path="/"><RegistrationLogin loginRegistrationModalVisibility={loginRegistrationModalVisibility} hideLoginRegistrationModal={() => setLoginRegistrationModal(false)} /><SearchBar /><Pets /></Route>
           <Route path="/pets"><Pets /></Route>
           <Route exact path="/account/:id"><Accounts /></Route>
           <Route path="/account/:id/my_pets"><PetsForAccount/></Route>
         </Switch>
       </Router>
-    <br></br>
-    <Footer></Footer>
+    <Footer />
     </div>
   );  
 }

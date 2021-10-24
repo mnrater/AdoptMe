@@ -43,7 +43,7 @@ export const Pets = () => {
                         </div>
                     )
                 })}
-            </div>s
+            </div>
         </>
     )
 }
