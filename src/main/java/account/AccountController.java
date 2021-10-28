@@ -33,4 +33,11 @@ public class AccountController {
         return service.getAllPetsForAccount(id);
     }
 
+    @RequestMapping(value="/account/{id}/change_data", method=RequestMethod.POST)
+    public void updateData(@PathVariable(value = "id") Integer id, @RequestBody Account account) {
+
+
+    }
+
+
 }

@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
-// import './css/PetsForAccount.css';
+import './css/PetsForAccount.css';
 import { useParams } from "react-router-dom";
 
-export const PetsForAccount = () => {
+export const PetsForShelter = () => {
 
-    const [appState, setAppState] = useState({ PetsForAccount: [] })
+    const [appState, setAppState] = useState({ petsForShelters: [] })
 
     const param = useParams();
 
     useEffect(() => {
-        const url = 'http://localhost:8080/account/' + param.id + '/my_pets';
+        const url = 'http://localhost:8080/shelters/'+param.id+'/my_pets';
         fetch(url)
             .then(data => data.json())
-            .then(response => setAppState({ PetsForAccount: response }))
+            .then(response => setAppState({ petsForShelters: response }))
     });
 
     var yearToPronounceRok = 1;
@@ -21,10 +21,10 @@ export const PetsForAccount = () => {
     return (
         <>
             <div class="pet_container">
-                {appState.PetsForAccount.map(pet => {
+                {appState.petsForShelters.map(pet => {
                     return (
                         <div class="pet">
-                            <img class="petPhoto" src={pet.photo}></img>
+                            <img class="petPhoto" src={pet.photo} alt=""></img>
                             <hr></hr>
                             <div class="petName">
                                 <b>{pet.name}</b>
