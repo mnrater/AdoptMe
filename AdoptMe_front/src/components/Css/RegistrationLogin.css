@@ -11,8 +11,11 @@
 }
 
 .registration_login_modal_content {
-    width: 500px;
+    width: 380px;
+    height: 440px;
     background-color: #fff;
+    text-align: center;
+    padding: 30px;
 }
 
 .registration_login_modal_header .registration_login_modal_footer {

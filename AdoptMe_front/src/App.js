@@ -23,9 +23,10 @@ function App() {
   return (
     <div className="App">
       <Header showLoginRegistrationModal={() => setLoginRegistrationModal(true)} />
+      <RegistrationLogin loginRegistrationModalVisibility={loginRegistrationModalVisibility} hideLoginRegistrationModal={() => setLoginRegistrationModal(false)} />
       <Router>
         <Switch>
-          <Route path="/"><RegistrationLogin loginRegistrationModalVisibility={loginRegistrationModalVisibility} hideLoginRegistrationModal={() => setLoginRegistrationModal(false)} /><SearchBar /><Pets /></Route>
+          <Route path="/"><SearchBar /><Pets /></Route>
           <Route path="/pets"><Pets /></Route>
           <Route exact path="/account/:id"><Accounts /></Route>
           <Route path="/account/:id/my_pets"><PetsForAccount/></Route>
