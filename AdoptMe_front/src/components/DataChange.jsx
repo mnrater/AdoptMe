@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import './css/DataChange.css'
 
 export const DataChange = () => {
@@ -16,21 +16,35 @@ export const DataChange = () => {
             .then(response => setAppState({ accounts: response }))
     });
 
+    const showPassword = () => {
+        const x = document.getElementById("password")
+        if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        
+      };
+
     return (
         <>
-        <form id="xd">
-            <div class="xd">
-                <div class="inputs">
-                    <label><h3>Email:</h3></label>
-                    <span class="span" id="email">{appState.accounts.email}</span>
-                    <hr ></hr>
-                    <label><h3>Numer telefonu:</h3></label>
-                    <span class="span" id="phonenumber" >{"+48 " + appState.accounts.phoneNumber}</span>
-                    <hr></hr>
-                    <label><h3>Adres:</h3></label>
-                    <span class="span" id="adres" >{appState.accounts.address}</span>
-                    <button id="button" type="submit">Potwierdzam</button>
-                </div>
+        <form id="main_form">
+            <div id="box_datachange">
+                <label><h3>Email:</h3></label>
+                    <input class="input" id="email" placeholder={appState.accounts.email}></input>
+                <hr ></hr>
+                <label><h3>Hasło:</h3></label>
+                    <button id="password_button" type="button" onClick={() => showPassword()}>Pokaż hasło</button>
+                    <input class="input" id="password" type="password" value={appState.accounts.password}></input>
+                <hr></hr>
+                <label><h3>Numer telefonu:</h3></label>
+                    <input class="input" id="phonenumber" placeholder={"+48 " + appState.accounts.phoneNumber}></input>
+                <hr></hr>
+                <label><h3>Adres:</h3></label>
+                    <input class="input" id="adres" placeholder={appState.accounts.address}></input>
+                <Link to={"/account/" + param.id}>
+                    <button id="data_button" type="submit">Potwierdzam</button>
+                </Link>
             </div>
         </form> 
         </>

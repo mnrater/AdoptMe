@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './css/PetsForAccount.css';
+import './css/MainPage.css';
 import { useParams } from "react-router-dom";
 
 export const PetsForShelter = () => {
@@ -24,12 +24,12 @@ export const PetsForShelter = () => {
                 {appState.petsForShelters.map(pet => {
                     return (
                         <div class="pet">
-                            <img class="petPhoto" src={pet.photo} alt=""></img>
+                            <img class="pet_photo" src={pet.photo} alt=""></img>
                             <hr></hr>
-                            <div class="petName">
+                            <div class="pet_mame">
                                 <b>{pet.name}</b>
                             </div>
-                            <div class="petAge">
+                            <div class="pet_age">
                                 {(() => {
                                     if (pet.age == yearToPronounceRok) {
                                         return (<b>{pet.age} rok</b>);
