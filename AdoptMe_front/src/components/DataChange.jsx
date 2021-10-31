@@ -29,7 +29,7 @@ export const DataChange = () => {
                     <hr></hr>
                     <label><h3>Adres:</h3></label>
                     <span class="span" id="adres" >{appState.accounts.address}</span>
-                    <button id="button" type="submit" >Potwierdzam</button>
+                    <button id="button" type="submit">Potwierdzam</button>
                 </div>
             </div>
         </form> 

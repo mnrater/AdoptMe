@@ -1,0 +1,144 @@
+.registration_login_modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.registration_login_modal_content {
+    width: 380px;
+    height: 440px;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10%;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    border: solid;
+}
+
+.registration_login_modal_header .registration_login_modal_footer {
+    padding: 10px;
+}
+
+.registration_login_modal_title {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+.username_input {
+    margin-bottom: 10px;
+    width: 80%;
+    height: 30px;
+    text-align: center;
+}
+
+.password_input {
+    margin-bottom: 15px;
+    width: 80%;
+    height: 30px;
+    text-align: center;
+}
+
+.username_text {
+    color: white;
+    font-size: 16px;
+}
+
+.password_text {
+    color: white;
+    font-size: 16px;
+}
+
+hr {
+    height: 1px;
+    background-color: white;
+    border: none;
+}
+
+.login_button {
+    display: block;
+    width: 20%;
+    padding: 2px;
+    text-align: center;
+    margin: auto;
+    border-radius: 50px;
+    background-color: white;
+    color: black !important;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 3px 20px 0 #0000003b;
+}
+
+.login_button:hover {
+    cursor: pointer;
+    background: #DCD9D4;
+    transition: 0.5s;
+}
+
+.other_logins_text {
+    color: white;
+    font-size: 16px;
+}
+
+.no_account_info {
+    color: white;
+    font-size: 16px;
+}
+
+.register_input {
+    color: white !important;
+    text-decoration: none;
+}
+
+.facebook_login {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 9px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: black !important;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 3px 20px 0 #0000003b;
+}
+
+.facebook_login:hover {
+    cursor: pointer;
+    background: #DCD9D4;
+    transition: 0.5s;
+}
+
+.google_login {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 9px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: black !important;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 3px 20px 0 #0000003b;
+}
+
+.google_login:hover {
+    cursor: pointer;
+    background: #DCD9D4;
+    transition: 0.5s;
+}

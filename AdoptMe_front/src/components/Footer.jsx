@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './css/Footer.css'
 
 export const Footer = () => {
 
@@ -7,6 +8,7 @@ export const Footer = () => {
             <div className="footer_container">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"></link>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"></link>
+                <img class="footer_image" src="http://localhost:8080/images/back-removebg.png"></img>
                 <div class="footer-dark">
                     <footer>
                         <div class="container">
