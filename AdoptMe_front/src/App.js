@@ -15,7 +15,8 @@ import {
 import { Component } from 'react';
 import {NotFound} from './components/NotFound';
 import {Registration} from './components/Registration'
-import { DataChange } from './components/DataChange';
+import { DataChangeAccount } from './components/DataChangeAccount';
+import { DataChangeShelter } from './components/DataChangeShelter';
 import { Shelters } from './components/Shelters';
 import { PetsForShelter } from './components/PetsForShelter';
 
@@ -34,9 +35,10 @@ function App() {
           <Route path="/pets"></Route>
           <Route exact path="/account/:id"><Accounts /></Route>
           <Route path="/account/:id/my_pets"><PetsForAccount/></Route>
-          <Route path="/account/:id/change_data"><DataChange/></Route>
+          <Route path="/account/:id/change_data"><DataChangeAccount/></Route>
           <Route exact path="/shelters/:id"><Shelters/></Route>
           <Route exact path="/shelters/:id/my_pets"><PetsForShelter/></Route>
+          <Route path="/shelters/:id/change_data"><DataChangeShelter/></Route>
           <Route path="/register"><Registration /></Route>
           <Route><NotFound /></Route>
         </Switch>

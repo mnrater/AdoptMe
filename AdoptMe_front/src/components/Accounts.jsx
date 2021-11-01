@@ -10,7 +10,6 @@ export const Accounts = () => {
     const [passwordShown, setPasswordShown] = useState(false);
 
     const param = useParams();
-    const data = "./" + param.id + "/change_data";
 
 
     useEffect(() => {
@@ -55,7 +54,7 @@ export const Accounts = () => {
                 <hr></hr>
                 <label><h3>Adres:</h3></label>
                 <span class="span" id="adres" >{appState.accounts.address}</span>
-                <Link to={data}>
+                <Link to={"/" + param.id + "/change_data"}>
                     <button id="account_button" type="submit" >Zmień dane</button>
                 </Link>
             </div> 

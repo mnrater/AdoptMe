@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import './css/DataChange.css'
+import './css/DataChangeAccount.css'
 
-export const DataChange = () => {
+export const DataChangeAccount = () => {
 
     const [appState, setAppState] = useState({ accounts: [] })
 
