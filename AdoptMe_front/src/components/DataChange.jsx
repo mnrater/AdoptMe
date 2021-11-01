@@ -8,6 +8,13 @@ export const DataChange = () => {
 
     const param = useParams();
 
+    const emptyItem = {
+        email: '',
+        password: '',
+        phoneNumber: '',
+        address: ''
+    };
+
 
     useEffect(() => {
         const url = 'http://localhost:8080/account/' + param.id;
@@ -25,23 +32,24 @@ export const DataChange = () => {
           }
         
       };
+      
 
     return (
         <>
-        <form id="main_form">
+        <form id="main_form" method="post" action={"/accounts/" + param.id}>
             <div id="box_datachange">
                 <label><h3>Email:</h3></label>
                     <input class="input" id="email" placeholder={appState.accounts.email}></input>
                 <hr ></hr>
                 <label><h3>Hasło:</h3></label>
-                    <button id="password_button" type="button" onClick={() => showPassword()}>Pokaż hasło</button>
-                    <input class="input" id="password" type="password" value={appState.accounts.password}></input>
+                    {/* <button id="password_button" type="button" onClick={() => showPassword()}>Pokaż hasło</button> */}
+                    <input class="input" id="password" type="password" ></input>
                 <hr></hr>
                 <label><h3>Numer telefonu:</h3></label>
-                    <input class="input" id="phonenumber" placeholder={"+48 " + appState.accounts.phoneNumber}></input>
+                    <input class="input" id="phonenumber"  placeholder={"+48 " + appState.accounts.phoneNumber}></input>
                 <hr></hr>
                 <label><h3>Adres:</h3></label>
-                    <input class="input" id="adres" placeholder={appState.accounts.address}></input>
+                    <input class="input" id="adres"  placeholder={appState.accounts.address}></input>
                 <Link to={"/account/" + param.id}>
                     <button id="data_button" type="submit">Potwierdzam</button>
                 </Link>
@@ -49,4 +57,5 @@ export const DataChange = () => {
         </form> 
         </>
     )
+
 }

@@ -17,7 +17,7 @@ public class AccountRepository {
     private static final String FIND_ONE_BY_ID = "SELECT id, email, password, phonenumber, address FROM account WHERE id=?";
     private static final String CREATE = "INSERT INTO account(email, password, phonenumber, address) VALUES (:email, :password, :phonenumber, :address)";
     private static final String PETS_FOR_ACCOUNT = "SELECT id, name, age, photo, pettypes_id FROM account_pet INNER JOIN pet ON pet_id=id WHERE account_id=?";
-    private static final String UPDATE = "";
+    private static final String UPDATE = "update account set email = ?, password = ?, phoneNumber = ?, address = ? where id = ? ";
 
     private final NamedParameterJdbcTemplate namedTemplate;
     private final JdbcTemplate template;
@@ -39,5 +39,9 @@ public class AccountRepository {
 
     public List<Pet> findPetsForAccount(int id) {
         return template.query(PETS_FOR_ACCOUNT, new PetRowMapper(), id);
+    }
+
+    public void updateDataAccount(int id, String email, String password, String phoneNumber, String address){
+        template.update(UPDATE, email, password, phoneNumber, address, id);
     }
 }

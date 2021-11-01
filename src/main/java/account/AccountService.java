@@ -27,4 +27,8 @@ public class AccountService {
     public List<Pet> getAllPetsForAccount(int id){
         return repository.findPetsForAccount(id);
     }
+
+    public void updateAccount(int id, String email, String password, String phoneNumber, String address){
+        repository.updateDataAccount(id, email, password, phoneNumber, address);
+    }
 }

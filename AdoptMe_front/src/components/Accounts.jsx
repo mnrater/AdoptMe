@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './css/Accounts.css'
+import { AiFillEye } from 'react-icons/ai';
 
 export const Accounts = () => {
 
@@ -46,8 +47,8 @@ export const Accounts = () => {
                 <span class="span" id="email">{appState.accounts.email}</span>
                 <hr ></hr>
                 <label><h3>Hasło:</h3></label>
-                <button id="password_button" onClick={() => showPassword()}>Pokaż hasło</button>
-                <input class="span" id="password" type="password" value={appState.accounts.password}></input>
+                    <span class="password_button" onClick={() => showPassword()}><AiFillEye /></span>
+                    <input class="span" id="password" type="password" value={appState.accounts.password}></input>
                 <hr></hr>
                 <label><h3>Numer telefonu:</h3></label>
                 <span class="span" id="phonenumber" >{"+48 " + appState.accounts.phoneNumber}</span>

@@ -57,7 +57,7 @@ export const Header = ({showLoginRegistrationModal}) => {
                             <div class="header_content_top">
                                 <a class="header_link_left">Adoptuj</a>
                                 <a class="header_link_left">Wspomóż</a>
-                                <img class="logo" id="Logo" src={Logo} />
+                                <a href="/"><img class="logo" id="Logo" src={Logo} /></a>
                                 <a class="header_link_right">Blog</a>
                                 <a class="header_link_right" id="log_in" onClick={() => showLoginRegistrationModal()}>Zaloguj się</a>
                             </div>

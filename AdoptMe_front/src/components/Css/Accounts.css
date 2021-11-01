@@ -50,6 +50,15 @@
     margin-left: 85px;
 
 }
+
+.password_button {
+    text-decoration: none;
+    margin-left: 260px;
+    font-size: 30px;
+    color: rgb(6, 167, 221);
+    right: 0px;
+}
+
 #account_button:hover {
 background: rgb(5, 134, 177);
 color: rgb(255, 255, 255);
