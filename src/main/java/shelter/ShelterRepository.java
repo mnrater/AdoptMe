@@ -9,6 +9,7 @@ import pet.Pet;
 import pet.PetRowMapper;
 
 import javax.sql.DataSource;
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -18,7 +19,7 @@ public class ShelterRepository {
     private static final String FIND_ONE_BY_ID = "SELECT id, name, creationdate FROM shelter WHERE id=?";
     private static final String CREATE = "INSERT INTO account(name, creationdate) VALUES (:name, :creationdate)";
     private static final String PETS_FOR_SHELTER = "SELECT id, name, age, photo, pettypes_id FROM pet_shelter INNER JOIN pet ON pet_id=id WHERE shelter_id = ?";
-    private static final String UPDATE = "";
+    private static final String UPDATE = "UPDATE shelter SET name = ?, creationDate = ? WHERE id = ? ";
 
     private final NamedParameterJdbcTemplate namedTemplate;
     private final JdbcTemplate template;
@@ -38,5 +39,9 @@ public class ShelterRepository {
 
     public List<Pet> findAllPetsForShelter(int id){
         return template.query(PETS_FOR_SHELTER, new PetRowMapper(), id);
+    }
+
+    public void updateShelter(int id, String name, Date creationDate){
+        template.update(UPDATE, name, creationDate, id);
     }
 }

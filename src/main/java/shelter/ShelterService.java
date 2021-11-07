@@ -5,6 +5,7 @@ import account.AccountRepository;
 import org.springframework.stereotype.Service;
 import pet.Pet;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -26,5 +27,9 @@ public class ShelterService {
 
     public List<Pet> getAllPetsForShelter(int id){
         return repository.findAllPetsForShelter(id);
+    }
+
+    public void updateShelter(int id, String name, Date creationDate){
+        repository.updateShelter(id, name, creationDate);
     }
 }

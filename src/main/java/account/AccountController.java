@@ -1,5 +1,6 @@
 package account;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pet.Pet;
@@ -34,12 +35,8 @@ public class AccountController {
         return service.getAllPetsForAccount(id);
     }
 
-    @RequestMapping(value="/account/{id}/change_data", method = RequestMethod.POST)
-    public ResponseEntity updateData(@PathVariable(value = "id") Integer id, @RequestBody Account account) {
+    @RequestMapping(value="/account/{id}/change_data", method = RequestMethod.POST, consumes = "application/json")
+    public void updateData(@PathVariable(value = "id") Integer id, @RequestBody Account account) {
         service.updateAccount(id, account.getEmail(), account.getPassword(), account.getPhoneNumber(), account.getAddress());
-        System.out.println("xd");
-        return ResponseEntity.ok(account);
     }
-
-
 }

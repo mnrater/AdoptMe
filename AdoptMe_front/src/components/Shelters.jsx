@@ -46,7 +46,7 @@ export const Shelters = () => {
                 <label><h3>Data utworzenia:</h3></label>
                 <span class="span" id="adres" >{appState.shelters.creationDate}</span>
                 <Link to={"/shelters/" + param.id + "/change_data"}>
-                    <button id="account_button" type="submit" >Zmień dane</button>
+                    <button id="shelter_button" type="submit" >Zmień dane</button>
                 </Link>
             </div> 
             

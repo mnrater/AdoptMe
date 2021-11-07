@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './css/Accounts.css'
 import { AiFillEye } from 'react-icons/ai';
+import axios from "axios";
 
 export const Accounts = () => {
 
@@ -18,6 +19,7 @@ export const Accounts = () => {
             .then(data => data.json())
             .then(response => setAppState({ accounts: response }))
     });
+
 
     const showPassword = () => {
         const x = document.getElementById("password")
@@ -54,7 +56,7 @@ export const Accounts = () => {
                 <hr></hr>
                 <label><h3>Adres:</h3></label>
                 <span class="span" id="adres" >{appState.accounts.address}</span>
-                <Link to={"/" + param.id + "/change_data"}>
+                <Link to={"/account/" + param.id + "/change_data"}>
                     <button id="account_button" type="submit" >Zmień dane</button>
                 </Link>
             </div> 

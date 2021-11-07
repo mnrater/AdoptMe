@@ -33,8 +33,8 @@
   height: 485px;
 }
 
-#data_button {
-width: 200px;
+#data_button_account {
+width: 150px;
 text-align: center;
 font-size: 20px;
 bottom: 20px;
@@ -45,10 +45,11 @@ height: 50px;
 border-radius: 15px;
 border: 3p solid black;
 margin-top: 50px;
-margin-left: 85px;
+margin-left: 25px;
+float: left;
 
 }
-#data_button:hover {
+#data_button_account:hover {
 background: rgb(5, 134, 177);
 color: rgb(255, 255, 255);
 cursor: pointer;
@@ -67,5 +68,27 @@ cursor: pointer;
   font-size: 20px;;
   justify-content: center;
 }
+
+#data_button_shelter {
+  width: 150px;
+  text-align: center;
+  font-size: 20px;
+  bottom: 20px;
+  background: rgb(6, 167, 221);
+  color: #fff;
+  font-family: Tahoma, Geneva, sans-serif;
+  height: 50px;
+  border-radius: 15px;
+  border: 3p solid black;
+  margin-top: 275px;
+  margin-left: 25px;
+  float: left;
+}
+
+#data_button_shelter:hover {
+  background: rgb(5, 134, 177);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  }
 
 

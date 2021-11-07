@@ -51,6 +51,22 @@
 
 }
 
+#shelter_button {
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+    bottom: 20px;
+    background: rgb(6, 167, 221);
+    color: #fff;
+    font-family: Tahoma, Geneva, sans-serif;
+    height: 60px;
+    border-radius: 15px;
+    border: 3p solid black;
+    right: 100px;
+    margin-top: 200px;
+    margin-left: 40px;
+}
+
 .password_button {
     text-decoration: none;
     margin-left: 260px;
