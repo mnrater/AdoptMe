@@ -38,7 +38,7 @@ export const Accounts = () => {
                 <div class="my_adoptions">
                    Moje Adopcje
                    <img class="photo" src={require('../photos/adopcja-psa.jpg')} />
-                   <Link to="">
+                   <Link to={"/account/" + param.id + "/my_addoptions"}>
                         <button id="button_adopcje" type="submit" >Przejdź do moich adopcji</button>
                     </Link>
                 </div>

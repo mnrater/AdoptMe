@@ -39,4 +39,9 @@ public class AccountController {
     public void updateData(@PathVariable(value = "id") Integer id, @RequestBody Account account) {
         service.updateAccount(id, account.getEmail(), account.getPassword(), account.getPhoneNumber(), account.getAddress());
     }
+
+    @GetMapping("/account/{id}/my_addoptions")
+    public List<Pet> myAddoptions(@PathVariable(value = "id") Integer id){
+        return service.getAllAddoptions(id);
+    }
 }

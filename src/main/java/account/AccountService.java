@@ -32,4 +32,7 @@ public class AccountService {
         repository.updateDataAccount(id, email, password, phoneNumber, address);
     }
 
+    public List<Pet> getAllAddoptions(int id) {
+        return repository.getAllAddoptionsForAccount(id);
+    }
 }

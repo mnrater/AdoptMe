@@ -40,7 +40,7 @@ public class ShelterController {
     @RequestMapping(value="/shelters/{id}/change_data", method = RequestMethod.POST, consumes = "application/json")
     public void updateData(@PathVariable(value = "id") Integer id, @RequestBody Shelter shelter) throws ParseException {
         String date = shelter.getCreationDate();
-        Date newDate = new SimpleDateFormat("yyyy-MM-dd").parse(date);
-        service.updateShelter(id, shelter.getName(), newDate);
+        service.updateShelter(id, shelter.getName(), new SimpleDateFormat("yyyy-MM-dd").parse(date));
     }
+
 }
