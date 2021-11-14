@@ -88,6 +88,10 @@
     border-top-right-radius: 10%;
 }
 
+.pet_photo:hover {
+    filter: brightness(70%);
+}
+
 .pet_name {
     font-size: 30px;
     color: #fff;

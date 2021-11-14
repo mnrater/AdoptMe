@@ -1,5 +1,6 @@
 package pet;
 
+import account.Account;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,6 +18,12 @@ public class PetController {
     @GetMapping("/pets")
     public List<Pet> getPets() {
         return service.getAllPets();
+    }
+
+    @RequestMapping("/pet/{id}")
+    @ResponseBody
+    public Pet getPet(@PathVariable(value = "id") Integer id) {
+        return service.getPetById(id);
     }
 //
 //    @PostMapping("/pets")

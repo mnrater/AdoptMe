@@ -16,12 +16,25 @@ public class Pet {
     @Column(length = 40)
     private int age;
 
+    @Column(length = 5000)
+    private String describtion;
+
     @Column(length = 100)
     private String photo;
 
     @Column(length = 100)
     private String type;
 
+    @Column(length = 100)
+    private int shelter_id;
+
+    public int getShelter_id() {
+        return shelter_id;
+    }
+
+    public void setShelter_id(int shelter_id) {
+        this.shelter_id = shelter_id;
+    }
 
     public long getId() {
         return id;
@@ -61,6 +74,14 @@ public class Pet {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getDescribtion() {
+        return describtion;
+    }
+
+    public void setDescribtion(String describtion) {
+        this.describtion = describtion;
     }
 
     @Override

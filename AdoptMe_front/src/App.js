@@ -20,6 +20,7 @@ import { DataChangeShelter } from './components/DataChangeShelter';
 import { Shelters } from './components/Shelters';
 import { PetsForShelter } from './components/PetsForShelter';
 import { AddoptionsForAccount } from './components/AddoptionsForAccount';
+import { PetSpecification } from './components/PetSpecification';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <Switch>
           <Route exact path="/"><MainPage /></Route>
           <Route path="/pets"></Route>
+          <Route path="/pet/:id"><PetSpecification /></Route>
           <Route exact path="/account/:id"><Accounts /></Route>
           <Route path="/account/:id/my_pets"><PetsForAccount/></Route>
           <Route path="/account/:id/my_addoptions"><AddoptionsForAccount/></Route>

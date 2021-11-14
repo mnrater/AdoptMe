@@ -15,8 +15,31 @@ import java.util.List;
 @Repository
 public class ShelterRepository {
 
-    private static final String FIND_ALL = "SELECT id, name, creationdate FROM shelter";
-    private static final String FIND_ONE_BY_ID = "SELECT id, name, creationdate FROM shelter WHERE id=?";
+    private static final String FIND_ALL = "select shelter.id, shelter.name, shelter.creation_date, shelter.maps_lat, shelter.maps_lng, image.link, account.city, account.address\n" +
+            "from shelter\n" +
+            "right join image_shelter on shelter.id = image_shelter.shelter_id\n" +
+            "right join image on case\n" +
+            "when ((SELECT MAX(id) FROM IMAGE) = (SELECT MAX(image_id) from image_shelter))\n" +
+            "then image.id = shelter.id + (SELECT COUNT(*) FROM PET)\n" +
+            "when ((SELECT MAX(id) FROM IMAGE) != (SELECT MAX(image_id) from image_shelter))\n" +
+            "then image.id = shelter.id + (SELECT COUNT(*) FROM PET) - (SELECT COUNT(*) FROM SHELTER)\n" +
+            "end\n" +
+            "right join shelter_account on shelter.id = shelter_account.shelter_id\n" +
+            "right join account on shelter_account.shelter_id = account.id\n" +
+            "limit 1;";
+    private static final String FIND_ONE_BY_ID = "select shelter.id, shelter.name, shelter.creation_date, shelter.maps_lat, shelter.maps_lng, image.link, account.city, account.address\n" +
+            "from shelter\n" +
+            "right join image_shelter on shelter.id = image_shelter.shelter_id\n" +
+            "right join image on case\n" +
+            "when ((SELECT MAX(id) FROM IMAGE) = (SELECT MAX(image_id) from image_shelter))\n" +
+            "then image.id = shelter.id + (SELECT COUNT(*) FROM PET)\n" +
+            "when ((SELECT MAX(id) FROM IMAGE) = (SELECT MAX(image_id) from image_shelter))\n" +
+            "then image.id = shelter.id + (SELECT COUNT(*) FROM PET) - (SELECT COUNT(*) FROM SHELTER)\n" +
+            "end\n" +
+            "right join shelter_account on shelter.id = shelter_account.shelter_id\n" +
+            "right join account on shelter_account.shelter_id = account.id\n" +
+            "where shelter.id = ?\n" +
+            "limit 1;";
     private static final String CREATE = "INSERT INTO account(name, creationdate) VALUES (:name, :creationdate)";
     private static final String PETS_FOR_SHELTER = "SELECT id, name, age, photo, pettypes_id FROM pet_shelter INNER JOIN pet ON pet_id=id WHERE shelter_id = ?";
     private static final String UPDATE = "UPDATE shelter SET name = ?, creationDate = ? WHERE id = ? ";

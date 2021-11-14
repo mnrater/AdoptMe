@@ -25,6 +25,12 @@ public class ShelterController {
         return service.getAllshelters();
     }
 
+    @RequestMapping("/shelter/{id}")
+    @ResponseBody
+    public Shelter getShelter(@PathVariable(value = "id") Integer id) {
+        return service.getShelterById(id);
+    }
+
     @RequestMapping("/shelters/{id}")
     @ResponseBody
     public Shelter getAccount(@PathVariable(value = "id") Integer id) {

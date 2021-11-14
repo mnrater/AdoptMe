@@ -29,7 +29,9 @@ export const MainPage = () => {
                         {appState.pets.map(pet => {
                             return (
                                 <div class="pet">
-                                    <img class="pet_photo" src={pet.photo}></img>
+                                    <a href={"pet/" + pet.id}>
+                                        <img class="pet_photo" src={pet.photo}></img>
+                                    </a>
                                     <hr></hr>
                                     <div class="pet_name">
                                         <b>{pet.name}</b>

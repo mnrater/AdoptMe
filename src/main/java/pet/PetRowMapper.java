@@ -26,7 +26,9 @@ public class PetRowMapper implements RowMapper<Pet> {
         pet.setId(rs.getInt("id"));
         pet.setName(rs.getString("name"));
         pet.setAge(rs.getInt("age"));
-        pet.setPhoto(rs.getString("photo"));
+        pet.setDescribtion(rs.getString("describtion"));
+        pet.setPhoto(rs.getString("link"));
+        pet.setShelter_id(rs.getInt("shelter_id"));
         if (checkIfColumnExist(rs, "pettypes_id")) pet.setType(rs.getString("pettypes_id"));
         if (checkIfColumnExist(rs, "status")) pet.setType(rs.getString("status"));
         return pet;

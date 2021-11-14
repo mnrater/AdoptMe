@@ -30,6 +30,7 @@
     /* border-radius: 0 0 85% 85% / 30%; */
     transition: 1s;
     border-bottom: solid;
+    z-index: 100;
 }
 
 .header_container .header_content {
@@ -140,6 +141,7 @@ p {
             overflow: hidden;
             border-radius: 0 0 85% 85% / 30%;
             top: 0;
+            z-index: 100;
         }
 
         .logo {
@@ -204,6 +206,7 @@ p {
             overflow: hidden;
             border-radius: 0 0 85% 85% / 30%;
             top: 0;
+            z-index: 100;
         }
 
         .logo {
