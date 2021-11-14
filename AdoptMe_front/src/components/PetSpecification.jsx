@@ -5,16 +5,16 @@ import { useParams } from "react-router-dom";
 export const PetSpecification = () => {
 
     const [appState, setAppState] = useState({ pet_data: [] })
-    const [appStateShelters, setAppStateShelters] = useState({ shelters: [] })
+    // const [appStateShelters, setAppStateShelters] = useState({ shelters: [] })
 
     const param = useParams();
 
-    useEffect(() => {
-        const url = 'http://localhost:8080/shelters';
-        fetch(url)
-            .then(data => data.json())
-            .then(response => setAppStateShelters({ shelters: response }))
-    });
+    // useEffect(() => {
+    //     const url = 'http://localhost:8080/shelters';
+    //     fetch(url)
+    //         .then(data => data.json())
+    //         .then(response => setAppStateShelters({ shelters: response }))
+    // });
 
     useEffect(() => {
         const urlxd = 'http://localhost:8080/pet/' + param.id;
@@ -57,22 +57,15 @@ export const PetSpecification = () => {
                             </div>
                             <hr />
                         </div>
-                        <div class="pet_specification_shelter_info">
-                            {appStateShelters.shelters.map(shelter => {
-                                return (
-                                    <>
-                                    <div class="pet_specification_shelter_details">
-                                        <h3>{shelter.name}</h3>
-                                        <b>{shelter.city}</b>
-                                        <br/>
-                                        <b>{shelter.address}</b>
-                                    </div>
-                                    <div class="pet_specification_shelter_logo">
-                                        <button>Adoptuj!</button>
-                                    </div>
-                                    </>
-                                )
-                            })}
+                        <div class="pet_specification_shelter_data">
+                            <h2>Schronisko Janów Podlaski</h2>
+                            <b>Ul. Długa 36</b>
+                            <br/>
+                            <b>Janów Podlaski</b>
+                        </div>
+                        <hr />
+                        <div class="pet_specification_adopt_me_button">
+                            <a class="button_link">Adoptuj!</a>
                         </div>
                     </div>
                 </div>

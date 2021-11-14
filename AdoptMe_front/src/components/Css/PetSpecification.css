@@ -84,3 +84,28 @@
 .pet_specification_shelter_info {
     height: 100%;
 }
+
+.button_link {
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    height: 84px;
+    border-radius: 50px;
+    color: #333 !important;
+    background: #fff;
+    box-shadow: 0 3px 20px 0 #0000003b;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.pet_specification_adopt_me_button {
+    text-align: center;
+    padding: 40px;
+}
+
+.pet_specification_shelter_data {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
